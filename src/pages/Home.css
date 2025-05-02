@@ -22,12 +22,79 @@
   border-radius: 8px;
 }
 
-.filter-container {
+/* Redesigned search and controls section */
+.search-controls-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* For screens larger than 768px, keep items in a row */
+@media (min-width: 769px) {
+  .search-controls-container {
+    justify-content: center;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .search-controls-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.view-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.view-tab {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  font-family: "VT323", monospace;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-tab:hover {
+  background-color: #3B4CCA;
+}
+
+.view-tab.active {
+  background-color: #FFCB05;
+  color: #3B4CCA;
+  font-weight: bold;
+}
+
+.random-pokemon-btn {
+  background-color: #FF5E62;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-family: "VT323", monospace;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.random-pokemon-btn:hover {
+  background-color: #FFCB05;
+  color: #3B4CCA;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .loading-container {
@@ -74,7 +141,38 @@
 }
 
 @media (max-width: 600px) {
+  .home-container {
+    padding: 1rem;
+  }
+  
   .card-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  .view-tab {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 883px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 559px) {
+  .home-container {
+    padding: 1rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  }
+  
+  .view-tab {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
   }
 }

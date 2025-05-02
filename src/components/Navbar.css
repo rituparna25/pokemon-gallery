@@ -1,43 +1,66 @@
+@font-face {
+  font-family: 'Pokemon Solid';
+  src: url('../fonts/Pokemon Solid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+.navbar {
+  background-color: black;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
-  @font-face {
-    font-family: 'Pokemon Solid';
-    src: url('../fonts/Pokemon Solid.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+.nav-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.pokemon-logo-text {
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: 2.5rem;
+  color: #FFCB05; 
+  -webkit-text-stroke: 1px #3B4CCA; 
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 #3B4CCA;
+  text-align: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .pokemon-logo-text {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-logo-text {
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
   }
   
   .navbar {
-    background-color: black;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
+    padding: 0.6rem 0.5rem;
   }
-  
-  .nav-logo {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav-logo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  }
-  
-  .pokemon-logo-text {
-    font-family: 'Pokemon Solid', sans-serif;
-    font-size: 2.5rem;
-    color: #FFCB05; 
-    -webkit-text-stroke: 1px #3B4CCA; 
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 0 #3B4CCA;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+}
